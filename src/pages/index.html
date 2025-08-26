@@ -4,105 +4,237 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Famous — Verlichte Letters voor Bruiloften & Evenementen</title>
-    <meta name="description" content="Famous verkoopt premium verlichte letters voor bruiloften en evenementen. Modern, elegant en met een bruidelijke uitstraling." />
+    <meta name="description" content="Premium verlichte letters voor bruiloften en events. Modern, elegant en tijdloos." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/styles.css" />
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <nav class="nav">
+    <!-- Navigatie -->
+    <nav class="nav" aria-label="Hoofdnavigatie">
       <div class="container nav-inner">
-        <div class="brand">
-          <img src="/favicon.svg" width="24" height="24" alt="Famous" />
+        <a class="brand" href="#top" aria-label="Famous Home">
+          <img src="/favicon.svg" width="24" height="24" alt="" />
           <span>Famous</span>
           <span class="badge">Verlichte Letters</span>
-        </div>
+        </a>
         <div class="nav-links">
           <a href="#features">Kenmerken</a>
           <a href="#catalog">Catalogus</a>
-          <a class="cta" href="#cta">Reserveer nu</a>
+          <a href="#examples">Voorbeelden</a>
+          <a href="#pricing">Prijzen</a>
+          <a href="#faq">FAQ</a>
+          <a class="cta" href="#contact">Contact</a>
         </div>
       </div>
     </nav>
 
-    <header class="hero">
+    <!-- Hero -->
+    <header id="top" class="hero" role="banner">
       <div class="ring"></div>
       <div class="container">
         <span class="kicker">Bruiloften • Verlovingen • Evenementen</span>
         <h1>Verlichte letters voor elegante vieringen</h1>
-        <p class="lede">Premium letters en borden in feeststijl, ontworpen voor bruiloften en speciale gelegenheden. Een tijdloze uitstraling die perfect past bij witte bloemen en zachte linnen.</p>
+        <p class="lede">
+          Premium marquee-letters en borden met een warme gloed. Tijdloos design dat perfect combineert met witte bloemen en zachte linnen.
+        </p>
         <div class="hero-cta">
           <a class="cta" href="#catalog">Bekijk letters</a>
-          <a class="products buy" href="#features">Waarom Famous?</a>
-        </div>
-        <div class="hero-media">
-          <div class="browser">
-            <div class="browser-top"><div class="dot"></div></div>
-            <div class="browser-body"></div>
-          </div>
+          <a class="button outline" href="#features">Waarom Famous?</a>
+          <a class="button ghost" href="#contact" aria-label="Neem direct contact op">Offerte aanvragen</a>
         </div>
       </div>
     </header>
 
+    <!-- Kenmerken -->
     <section id="features" class="section">
       <div class="container">
         <h2>Ontworpen om te imponeren, gebouwd om lang mee te gaan</h2>
-        <p class="sub">Warme sfeerverlichting, sterke kwaliteit en snelle opbouw voor zorgeloze bruiloften.</p>
+        <p class="sub">Warme lichttemperatuur, event-grade afwerking en snelle, veilige opbouw.</p>
         <div class="grid">
           <div class="card">
             <div class="icon">💡</div>
-            <h3>Warme LED gloed</h3>
-            <p>Gelijkmatige verlichting met energiezuinige LED’s die de hele avond meegaan.</p>
+            <h3>Warme LED-gloed</h3>
+            <p>Gelijkmatige, foto-klare verlichting met energiezuinige LED’s die de hele avond meegaan.</p>
           </div>
           <div class="card">
             <div class="icon">🛠️</div>
-            <h3>Evenement-kwaliteit</h3>
-            <p>Duurzame, lichte frames met stabiele basis en snelle stroomaansluiting.</p>
+            <h3>Event-kwaliteit</h3>
+            <p>Duurzame, lichte frames met stabiele voet en snelle stroomaansluiting (kabels weggewerkt).</p>
           </div>
           <div class="card">
             <div class="icon">✨</div>
             <h3>Moderne afwerking</h3>
-            <p>Zachte diffusers en strakke lijnen voor een premium uitstraling in elke zaal.</p>
+            <p>Diffusers en strakke lijnen voor een premium look in elke trouwlocatie of zaal.</p>
+          </div>
+          <div class="card">
+            <div class="icon">⚡</div>
+            <h3>Snelle opbouw</h3>
+            <p>Modulaire elementen met quick-connect: stil installeren zonder de dag te verstoren.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🔌</div>
+            <h3>Veilig & stil</h3>
+            <p>Laagspanningsdrivers en kabelmanagement; voldoet aan gangbare event-normen.</p>
+          </div>
+          <div class="card">
+            <div class="icon">📸</div>
+            <h3>Foto-vriendelijk</h3>
+            <p>Zacht, egaal licht zonder harde hotspots — ideaal voor fotografie en video.</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Catalogus -->
     <section id="catalog" class="section products">
       <div class="container">
         <h2>Populaire letters en sets</h2>
-        <p class="sub">Combineer losse letters met onze meest geliefde bruiloft-sets.</p>
+        <p class="sub">Combineer losse letters met onze meest gekozen trouw-sets.</p>
+
         <div class="grid">
-          <article class="card" data-name="Letter A" data-price="45">
+          <!-- Losse letters -->
+          <article class="card" data-name="Losse Letter" data-price="35">
             <div class="image">A</div>
-            <div class="meta"><h3>Losse Letter</h3><span class="price">€45</span></div>
-            <p>Kies elke letter om jouw evenement te personaliseren.</p>
+            <div class="meta"><h3>Losse Letter</h3><span class="price">€35</span></div>
+            <p>Kies elke letter voor initialen, woorden of richtingaanwijzers.</p>
             <button class="buy" data-id="single">In winkelwagen</button>
           </article>
-          <article class="card" data-name="Letter &amp;" data-price="55">
+
+          <article class="card" data-name="Ampersand" data-price="55">
             <div class="image">&amp;</div>
             <div class="meta"><h3>Ampersand</h3><span class="price">€55</span></div>
-            <p>Perfect tussen de initialen van het paar en voor fotomomenten.</p>
-            <button class="buy" data-id="amp">In winkelwagen</button>
+            <p>Perfect tussen initialen en voor fotomomenten van het paar.</p>
+            <button class="buy" data-id="amp">&amp; toevoegen</button>
           </article>
+
           <article class="card" data-name="LOVE Set" data-price="180">
             <div class="image">LOVE</div>
             <div class="meta"><h3>LOVE Set</h3><span class="price">€180</span></div>
-            <p>Het tijdloze middelpunt voor recepties en fotomuren.</p>
+            <p>Tijdloos middelpunt voor recepties, ceremonie of fotomuur.</p>
             <button class="buy" data-id="love">In winkelwagen</button>
           </article>
-          <article class="card" data-name="MR &amp; MRS" data-price="220">
+
+          <article class="card" data-name="MR & MRS Set" data-price="220">
             <div class="image">MR&nbsp;&amp;&nbsp;MRS</div>
             <div class="meta"><h3>MR &amp; MRS</h3><span class="price">€220</span></div>
-            <p>Een echte blikvanger voor de hoofdtafel of entree.</p>
+            <p>Blikvanger bij de hoofdtafel of bij de entree.</p>
             <button class="buy" data-id="mrmrs">In winkelwagen</button>
+          </article>
+
+          <!-- Extra voorbeelden -->
+          <article class="card" data-name="Initialen Set (A&B)" data-price="110">
+            <div class="image">A&nbsp;&amp;&nbsp;B</div>
+            <div class="meta"><h3>Initialen Set</h3><span class="price">€110</span></div>
+            <p>Combinatie van twee letters en &amp; — volledig te personaliseren.</p>
+            <button class="buy" data-id="initials">In winkelwagen</button>
+          </article>
+
+          <article class="card" data-name="JA Set" data-price="110">
+            <div class="image">JA</div>
+            <div class="meta"><h3>JA Set</h3><span class="price">€110</span></div>
+            <p>Korte, krachtige set voor ceremonie of photobooth.</p>
+            <button class="buy" data-id="ja">In winkelwagen</button>
+          </article>
+
+          <article class="card" data-name="BAR Sign" data-price="105">
+            <div class="image">BAR</div>
+            <div class="meta"><h3>BAR Sign</h3><span class="price">€105</span></div>
+            <p>Stijlvolle aanduiding bij bar of cocktailstation.</p>
+            <button class="buy" data-id="bar">In winkelwagen</button>
+          </article>
+
+          <article class="card" data-name="DANCE Sign" data-price="140">
+            <div class="image">DANCE</div>
+            <div class="meta"><h3>DANCE Sign</h3><span class="price">€140</span></div>
+            <p>Activeert de dansvloer met een uitnodigende gloed.</p>
+            <button class="buy" data-id="dance">In winkelwagen</button>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Voorbeelden (galerij) -->
+    <section id="examples" class="section">
+      <div class="container">
+        <h2>Voorbeelden op locatie</h2>
+        <p class="sub">Een indruk van stylingmogelijkheden met bloemen, linnen en achterwanden.</p>
+                 <div class="grid gallery">
+                       <figure class="card photo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjRThBNkI4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5MT1ZFPC90ZXh0Pgo8dGV4dCB4PSIyMDAiIHk9IjIyMCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTVBN0Y1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5GdWxsZSBzZXQgPC90ZXh0Pgo8L3N2Zz4=" alt="LOVE set placeholder" class="placeholder-image" />
+              <figcaption>LOVE bij de fotowand (wit + blush)</figcaption>
+              <button class="button order-btn" onclick="orderItem('LOVE Set', 180)">Bestel nu</button>
+            </figure>
+                       <figure class="card photo">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjM0IzQjNDIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CQVI8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMjIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5QkE0QjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkZhbW91cyBCQVIgU2lnbjwvdGV4dD4KPC9zdmc+" alt="BAR sign placeholder" class="placeholder-image" />
+              <figcaption>MR &amp; MRS bij de hoofdtafel</figcaption>
+              <button class="button order-btn" onclick="orderItem('MR & MRS Set', 220)">Bestel nu</button>
+            </figure>
+                       <figure class="card photo">
+              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjM0IzQjNDIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CQVI8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMjIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5QkE0QjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkZhbW91cyBCQVIgU2lnbjwvdGV4dD4KPC9zdmc+" alt="BAR sign placeholder" class="placeholder-image" />
+              <figcaption>BAR sign in cocktail-corner</figcaption>
+              <button class="button order-btn" onclick="orderItem('BAR Sign', 105)">Bestel nu</button>
+            </figure>
+                       <figure class="card photo">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjVGNUY1Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjM0IzQjNDIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CQVI8L3RleHQ+Cjx0ZXh0IHg9IjIwMCIgeT0iMjIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5QkE0QjIiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkZhbW91cyBCQVIgU2lnbjwvdGV4dD4KPC9zdmc+" alt="BAR sign placeholder" class="placeholder-image" />
+              <figcaption>Initialen set bij entree</figcaption>
+              <button class="button order-btn" onclick="orderItem('Initialen Set (A&B)', 110)">Bestel nu</button>
+            </figure>
+         </div>
+      </div>
+    </section>
+
+    <!-- Prijzen & pakketten -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2>Pakketten & prijzen</h2>
+        <p class="sub">Alle tarieven zijn incl. plaatsing op locatie binnen regio, excl. bijzondere opbouw-eisen.</p>
+        <div class="grid pricing">
+          <div class="card price-card">
+            <h3>Basic</h3>
+            <p class="price-lg">v.a. €140</p>
+            <ul class="features">
+              <li>2 losse letters of korte set (bijv. JA)</li>
+              <li>Warme LED-gloed</li>
+              <li>Op- en afbouw inbegrepen</li>
+            </ul>
+            <div class="price-cta">
+              <a class="button block" href="#contact">Kies Basic</a>
+              <a class="button outline block" href="#examples">Bekijk voorbeelden</a>
+            </div>
+          </div>
+          <div class="card price-card featured">
+            <div class="ribbon">Meest gekozen</div>
+            <h3>Classic</h3>
+            <p class="price-lg">v.a. €220</p>
+            <ul class="features">
+              <li>Complete set (LOVE / MR &amp; MRS)</li>
+              <li>Kabelmanagement on-site</li>
+              <li>Stylingadvies vooraf</li>
+            </ul>
+            <a class="button block cta" href="#contact">Kies Classic</a>
+          </div>
+          <div class="card price-card">
+            <h3>Custom</h3>
+            <p class="price-lg">op aanvraag</p>
+            <ul class="features">
+              <li>Eigen woord/naam/jaartal</li>
+              <li>Meerdere zones & combinaties</li>
+              <li>Afstemming met ceremoniemeester</li>
+            </ul>
+            <div class="price-cta">
+              <a class="button block outline" href="#contact">Kies Custom</a>
+              <a class="button ghost block" href="#catalog">Inspiratie</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
     <section class="section">
       <div class="container">
-        <h2>Bruidsparen houden van Famous</h2>
+        <h2>Bruidsparen over Famous</h2>
         <p class="sub">Een paar woorden van recente bruiloften.</p>
         <div class="testimonials">
           <div class="quote">
@@ -117,25 +249,151 @@
       </div>
     </section>
 
-    <section id="cta" class="section">
-      <div class="container center">
-        <h2>Reserveer jouw datum</h2>
-        <p class="sub">Vertel ons jouw locatie en letters. Wij brengen de sfeer.</p>
-        <a class="cta" href="mailto:hello@example.com?subject=Famous%20Letters%20Boeking">Reserveer nu</a>
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Veelgestelde vragen</h2>
+        <p class="sub">Praktische info over stroom, plaatsing, afmetingen en planning.</p>
+        <div class="accordion">
+          <details class="faq-item">
+            <summary>
+              <span>Hoeveel stroom is er nodig?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Een standaard 230V-groep volstaat. We werken met energiezuinige LED-drivers. Per set rekenen we op ~40–120W afhankelijk van grootte en configuratie.</p>
+              <ul>
+                <li>Stekker: 230V Schuko</li>
+                <li>Verlengkabels en verdeeldozen kunnen wij meenemen</li>
+                <li>We testen altijd veilig op locatie</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Hoe lang duurt op- en afbouw?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Gemiddeld 20–40 minuten per set, afhankelijk van locatie, bereikbaarheid en kabelrouting.</p>
+              <ul>
+                <li>We plannen opbouw buiten de ceremonie om</li>
+                <li>Afbouw na afloop in 15–30 minuten</li>
+                <li>Stil gereedschap en kabelmanagement</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Kunnen de letters buiten staan?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Ja, bij droog weer of onder overkapping. We adviseren altijd over een veilige, stabiele plaatsing.</p>
+              <ul>
+                <li>Vlakke, droge ondergrond</li>
+                <li>Bescherming tegen regen en wind</li>
+                <li>Veilige kabelroutes zonder struikelgevaar</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Wat zijn de afmetingen en hoogte?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Letters zijn doorgaans 80–120 cm hoog. Breedte hangt af van letter/woord.</p>
+              <ul>
+                <li>LOVE: ± 3–4 meter breed</li>
+                <li>MR &amp; MRS: ± 3–5 meter, afhankelijk van spacing</li>
+                <li>Diepte/voet: 25–40 cm voor stabiliteit</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Zijn de lampen dimbaar en fotovriendelijk?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Ja. De lichtopbrengst is egaal en zacht zonder harde hotspots. Dimbaarheid is op aanvraag mogelijk.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Hoe werkt reserveren en betaling?</span>
+              <span class="chevron" aria-hidden="true"></span>
+            </summary>
+            <div class="answer">
+              <p>Vraag een offerte via de contactsectie. Na bevestiging reserveren we jouw datum.</p>
+              <ul>
+                <li>Offerte en bevestiging per e‑mail</li>
+                <li>Betaalopties: factuur (vooraf/achteraf) in overleg</li>
+                <li>Annuleren kan volgens afspraken in de offerte</li>
+              </ul>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Contact (e-mail) -->
+    <section id="contact" class="section">
+      <div class="container center">
+        <h2>Neem contact op</h2>
+        <p class="sub">Mail ons je datum, locatie en gewenste letters. We reageren snel met beschikbaarheid en prijs.</p>
+
+        <div class="grid contact-grid">
+          <div class="card contact-card">
+            <h3>E-mail</h3>
+            <p><a id="mailtoLink" class="link-strong" href="mailto:hello@example.com?subject=Famous%20Offerte&body=Hallo%20Famous%2C%0A%0ADatum%3A%0ALocatie%3A%0ALetters%2FSet%3A%0AOpmerkingen%3A%0A">hello@example.com</a></p>
+            <button class="button small" id="copyEmail" data-email="hello@example.com">Kopieer e-mail</button>
+          </div>
+
+          <form class="card contact-card" method="get" action="mailto:hello@example.com">
+            <h3>Snelle e-mail (mailto)</h3>
+            <label class="field">
+              <span>Naam</span>
+              <input type="text" id="name" placeholder="Jouw naam" required />
+            </label>
+            <label class="field">
+              <span>Datum</span>
+              <input type="text" id="date" placeholder="DD-MM-JJJJ" />
+            </label>
+            <label class="field">
+              <span>Locatie</span>
+              <input type="text" id="venue" placeholder="Locatie of plaats" />
+            </label>
+            <label class="field">
+              <span>Gewenste letters/set</span>
+              <input type="text" id="letters" placeholder="Bijv. LOVE / MR & MRS / Initialen" />
+            </label>
+            <button type="submit" class="button cta block" id="mailtoButton">Open e-mail</button>
+            <p class="help">Dit opent je e-mailprogramma met een ingevulde boodschap.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
       <div class="container footer-row">
         <span>© <span id="year"></span> Famous</span>
         <div class="footer-links">
           <a href="#features">Kenmerken</a>
           <a href="#catalog">Catalogus</a>
-          <a href="mailto:hello@example.com">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </footer>
 
+    <!-- Toast -->
     <div id="toast" class="toast" role="status" aria-live="polite">Toegevoegd aan winkelwagen</div>
   </body>
 </html>

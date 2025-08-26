@@ -31,6 +31,63 @@ document.addEventListener('DOMContentLoaded', () => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+    // Contact helpers
+    const copyBtn = document.getElementById('copyEmail');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', () => {
+        const email = copyBtn.getAttribute('data-email') || 'hello@example.com';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(() => {
+            showToast(`E-mail gekopieerd: ${email}`);
+          });
+        } else {
+          const textarea = document.createElement('textarea');
+          textarea.value = email;
+          document.body.appendChild(textarea);
+          textarea.select();
+          try { document.execCommand('copy'); showToast(`E-mail gekopieerd: ${email}`); } finally { document.body.removeChild(textarea); }
+        }
+      });
+    }
+
+    const mailtoForm = document.querySelector('#contact form');
+    if (mailtoForm) {
+      mailtoForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name')?.value || '';
+        const date = document.getElementById('date')?.value || '';
+        const venue = document.getElementById('venue')?.value || '';
+        const letters = document.getElementById('letters')?.value || '';
+        const subject = encodeURIComponent('Famous Offerte');
+        const body = encodeURIComponent(
+          `Hallo Famous,\n\nNaam: ${name}\nDatum: ${date}\nLocatie: ${venue}\nLetters/Set: ${letters}\n\nGroet,\n${name}`
+        );
+        window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+      });
+    }
+
+    // FAQ single-open behavior
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((it) => {
+      it.addEventListener('toggle', () => {
+        if (it.open) {
+          faqItems.forEach((other) => { if (other !== it) other.open = false; });
+        }
+      });
+    });
   });
+  
+  // Global order function for gallery items
+  function orderItem(name, price) {
+    const toast = document.getElementById('toast');
+    if (toast) {
+      toast.textContent = `${name} bestelling ontvangen (€${price})`;
+      toast.classList.add('show');
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => toast.classList.remove('show'), 3000);
+    }
+    // Here you can add future functionality like redirecting to contact form
+    // or opening a modal for order details
+  }
   
 

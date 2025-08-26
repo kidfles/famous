@@ -111,6 +111,7 @@
   .contact-card { grid-column: span 6; display: flex; flex-direction: column; gap: 10px; }
   .field { display: grid; gap: 6px; text-align: left; }
   .field input { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font: inherit; }
+  .field textarea { border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px; font: inherit; line-height: 1.4; resize: vertical; }
   .link-strong { font-weight: 800; }
   .help { color: var(--muted); margin: 0; }
 

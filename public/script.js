@@ -57,12 +57,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = document.getElementById('name')?.value || '';
         const date = document.getElementById('date')?.value || '';
         const venue = document.getElementById('venue')?.value || '';
+        const phone = document.getElementById('phone')?.value || '';
         const letters = document.getElementById('letters')?.value || '';
+        const message = document.getElementById('message')?.value || '';
         const subject = encodeURIComponent('Famous Offerte');
-        const body = encodeURIComponent(
-          `Hallo Famous,\n\nNaam: ${name}\nDatum: ${date}\nLocatie: ${venue}\nLetters/Set: ${letters}\n\nGroet,\n${name}`
-        );
-        window.location.href = `mailto:hello@example.com?subject=${subject}&body=${body}`;
+        const lines = [
+          'Hallo Famous,',
+          '',
+          'Graag ontvang ik een offerte voor verlichte letters.',
+          '',
+          `Naam: ${name}`,
+          `Datum: ${date}`,
+          `Locatie: ${venue}`,
+          `Telefoon: ${phone}`,
+          `Gewenste letters/set: ${letters}`,
+          '',
+          message ? `Aanvullende info / wensen:\n${message}` : 'Aanvullende info / wensen:',
+          '',
+          'Alvast bedankt!',
+          '',
+          'Groet,',
+          name
+        ];
+        const body = encodeURIComponent(lines.join('\n'));
+        window.location.href = `mailto:info@famouseventsupport.nl?subject=${subject}&body=${body}`;
       });
     }
 

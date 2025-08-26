@@ -351,13 +351,24 @@
 
         <div class="grid contact-grid">
           <div class="card contact-card">
-            <h3>E-mail</h3>
-            <p><a id="mailtoLink" class="link-strong" href="mailto:hello@example.com?subject=Famous%20Offerte&body=Hallo%20Famous%2C%0A%0ADatum%3A%0ALocatie%3A%0ALetters%2FSet%3A%0AOpmerkingen%3A%0A">hello@example.com</a></p>
-            <button class="button small" id="copyEmail" data-email="hello@example.com">Kopieer e-mail</button>
+            <h3>Famous Event Support</h3>
+            <p class="sub">Contactgegevens</p>
+            <p>Telefoon: <a class="link-strong" href="tel:+31655308330">+31 (0)6 55 30 83 30</a></p>
+            <p>Op maandag gesloten</p>
+            <p>Op dinsdag en woensdag 12:00–17:30</p>
+            <p>Op donderdag t/m zaterdag 24 uur</p>
+            <p>E‑mail: <a id="mailtoLink" class="link-strong" href="mailto:info@famouseventsupport.nl?subject=Famous%20Offerte">info@famouseventsupport.nl</a></p>
+            <button class="button small" id="copyEmail" data-email="info@famouseventsupport.nl">Kopieer e-mail</button>
+            <div>
+              <h3>Postadres</h3>
+              <p>Famous Event Support / Verlichte Dansvloeren.nl<br/>Broekstraat 68<br/>6612 AD Nederasselt</p>
+              <h3>Overige</h3>
+              <p>KVK nummer: 77749774</p>
+            </div>
           </div>
 
-          <form class="card contact-card" method="get" action="mailto:hello@example.com">
-            <h3>Snelle e-mail (mailto)</h3>
+          <form class="card contact-card" method="get" action="mailto:info@famouseventsupport.nl">
+            <h3>Snelle e-mail</h3>
             <label class="field">
               <span>Naam</span>
               <input type="text" id="name" placeholder="Jouw naam" required />
@@ -371,8 +382,16 @@
               <input type="text" id="venue" placeholder="Locatie of plaats" />
             </label>
             <label class="field">
+              <span>Telefoonnummer</span>
+              <input type="text" id="phone" placeholder="Telefoonnummer" />
+            </label>
+            <label class="field">
               <span>Gewenste letters/set</span>
               <input type="text" id="letters" placeholder="Bijv. LOVE / MR & MRS / Initialen" />
+            </label>
+            <label class="field">
+              <span>Bericht</span>
+              <textarea id="message" rows="6" placeholder="Bericht (optioneel)"></textarea>
             </label>
             <button type="submit" class="button cta block" id="mailtoButton">Open e-mail</button>
             <p class="help">Dit opent je e-mailprogramma met een ingevulde boodschap.</p>
